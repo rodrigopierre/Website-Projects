@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <main>
+    <div class="left">
+      <img src="assets\images\bg-sidebar-desktop.svg" alt="imagem de fundo" id="back-img">
+      <div class="step1">
+        <div class="step1-left" id="step1-left">1</div>
+        <div class="step1-right">
+          <p>Step 1</p>
+          <h1>Your info</h1>
+        </div>
+      </div>
+      <div class="step2">
+        <div class="step2-left" id="step2-left">2</div>
+        <div class="step2-right">
+          <p>Step 2</p>
+          <h1>Select plan</h1>
+        </div>
+      </div>
+      <div class="step3">
+        <div class="step3-left" id="step3-left">3</div>
+        <div class="step3-right">
+          <p>Step 3</p>
+          <h1>Add-ons</h1>
+        </div>
+      </div>
+      <div class="step4">
+        <div class="step4-left" id="step4-left">4</div>
+        <div class="step4-right">
+          <p>Step 4</p>
+          <h1>Summary</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="personal-info" id="personal-info">
+      <h1>Personal info</h1>
+      <p>Please provide your name, email address, and phone number.</p>
+      <div class="personal-info-request">
+        <h2>Name</h2>
+        <input type="text" id="nome" class="required" placeholder="e.g. Stephen King" onclick="voltaNome()">
+        <h3 class="error" id="erroNome"></h3>
+      </div>
+      <div class="personal-info-request">
+        <h2>Email Address</h2>
+        <input type="text" id="email" class="required" placeholder="e.g. stephenking@lorem.com" onclick="voltaEmail()">
+        <h3 class="error" id="erroEmail"></h3>
+      </div>
+      <div class="personal-info-request">
+        <h2>Phone Number</h2>
+        <input type="text" id="phone" class="required" placeholder="e.g. 31 97562-4896" onclick="voltaPhone()">
+        <h3 class="error" id="erroPhone"></h3>
+      </div>
+      <button class="next-button" id="next1" onclick="irTela2()">Next Step</button>
+    </div>
+
+    <div class="select-plan" id="select-plan">
+      <h1>Select your plan</h1>
+      <p>You have the option of monthly or yearly billing.</p>
+      <div class="plan-options" id="plan-options">
+        <button class="arcade" id="arc" onclick="cliqueArcade()">
+          <div class="arcade-img">
+            <img src="assets\images\icon-arcade.svg" alt="logo arcade">
+          </div>
+          <h2>Arcade</h2>
+          <div><h3 id="preco-arc">$9/mo</h3></div>
+          <h4 id="mf1">2 months free</h4>
+        </button>
+        <button class="advanced" id="adv" onclick="cliqueAdvanced()">
+          <div class="advanced-img">
+            <img src="assets\images\icon-advanced.svg" alt="logo advanced">
+          </div>
+          <h2>Advanced</h2>
+          <div><h3 id="preco-adv">$12/mo</h3></div>
+          <h4 id="mf2">2 months free</h4>
+        </button>
+        <button class="pro" id="pro" onclick="cliquePro()">
+          <div class="pro-img">
+            <img src="assets\images\icon-pro.svg" alt="logo pro">
+          </div>
+          <h2>Pro</h2>
+          <div><h3 id="preco-pro">$15/mo</h3></div>
+          <h4 id="mf3">2 months free</h4>
+        </button>
+      </div>
+      <h5 id="erro-plans">You must select your plan</h5>
+      <div class="middle-plan">
+        <div class="middle-plan-monthly" id="middle-plan-monthly">Monthly</div>
+        <div class="toggle-switch">
+          <input type="checkbox" id="chk" onclick="trocarTempo()">
+          <label for="chk" class="switch">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="middle-plan-yearly" id="middle-plan-yearly">Yearly</div>
+      </div>
+      <div class="plan-bottom">
+        <button class="go-back" id="go-back2" onclick="voltarTela1()">Go Back</button>
+        <button class="next-button" id="next2" onclick="irTela3()">Next Step</button>
+      </div>
+    </div>
+
+    <div class="add-ons" id="add-ons">
+      <h1>Pick add-ons</h1>
+      <p>Add-ons help enhance your gaming experience.</p>
+      <div class="add-ons-middle">
+        <button class="add-on" id="online-service" onclick="cliqueOS()">
+          <div class="check"><input type="checkbox" style="height: 20px; width: 20px;" id="check-os"></div>
+          <div class="add-on-middle">
+            <h2>Online service</h2>
+            <p>Access to multiplayer games</p>
+          </div>
+          <div class="value"><h3 id="os-preco">+$1/mo</h3></div>
+        </button>
+        <button class="add-on" id="larger-storage" onclick="cliqueLS()">
+          <div class="check"><input type="checkbox" style="height: 20px; width: 20px;" id="check-ls"></div>
+          <div class="add-on-middle">
+            <h2>Larger storage</h2>
+            <p>Extra 1TB of cloud save</p>
+          </div>
+          <div class="value"><h3 id="ls-preco">+$2/mo</h3></div>
+        </button>
+        <button class="add-on" id="customizable-profile" onclick="cliqueCP()">
+          <div class="check"><input type="checkbox" style="height: 20px; width: 20px;" id="check-cp"></div>
+          <div class="add-on-middle">
+            <h2>Customizable Profile</h2>
+            <p>Custom theme on your profile</p>
+          </div>
+          <div class="value"><h3 id="cp-preco">+$2/mo</h3></div>
+        </button>
+      </div>
+      <div class="add-ons-bottom">
+        <button class="go-back" id="go-back3" onclick="voltarTela2()">Go Back</button>
+        <button class="next-button" id="next3" onclick="irTela4()">Next Step</button>
+      </div>
+    </div>
+
+    <div class="summary" id="summary">
+      <h1>Finishing up</h1>
+      <p>Double-check everything looks OK before confirming.</p>
+      <div class="summary-middle">
+        <div class="summary-middle1">
+          <div class="summary-middle1-left">
+            <h2 id="plan-type">Arcade (Monthly)</h2>
+            <a href="">Change</a>
+          </div>
+          <div id="plan-price"><h2 id="price-plan">$9/mo</h2></div>
+        </div>
+        <div class="additionals" id="os-final">
+          <div class="additionals-left"><p>Online service</p></div>
+          <div class="prices"><h3 id="price-os">+$1/mo</h3></div>
+        </div>
+        <div class="additionals" id="ls-final">
+          <div class="additionals-left"><p>Larger storage</p></div>
+          <div class="prices"><h3 id="price-ls">+$2/mo</h3></div>
+        </div>
+        <div class="additionals" id="cp-final">
+          <div class="additionals-left"><p>Customizable profile</p></div>
+          <div class="prices"><h3 id="price-cp">+$2/mo</h3></div>
+        </div>
+        <div class="summary-middle2">
+          <div class="summary-middle2-left"><p id="total-bottom">Total (per month)</p></div>
+          <div id="price-total"><h4 id="total-price">$9/mo</h4></div>
+        </div>
+      </div>
+      <div class="summary-bottom">
+        <button class="go-back" id="go-back4" onclick="voltarTela3()">Go Back</button>
+        <button class="confirm" id="confirm" onclick="irTelaFinal()">Confirm</button>
+      </div>
+    </div>
+
+    <div class="finished" id="finished">
+      <div class="finished-img">
+        <img src="assets/images/icon-thank-you.svg" alt="">
+      </div>
+      <h1>Thank you!</h1>
+      <p>Thanks for confirming your subscription! We hope you have fun 
+        using our platform. If you ever need support, please feel free 
+        to email us at support@loremgaming.com.</p>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/rodrigopierre">Rodrigo Pierre</a>.
+  </div>
+</body>
+</html>
