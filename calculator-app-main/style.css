@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+html {
+    font-size: 62.5%;
+    font-family: 'League Spartan';
+}
+body {
+    background-color: hsl(222, 26%, 31%);
+    margin: 0;
+}
+main {
+    width: 450px;
+    height: 500px;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Parte de cima da calculadora */
+
+.top-calculator {
+    height: 10%;
+    display: flex;
+}
+.top-left {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: white;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.top-middle {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+}
+.top-right {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+#theme- {
+    font-weight: bold;
+}
+.theme-top {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 6px;
+    margin-top: 7px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.theme-bottom {
+    display: flex;
+    height: 16px;
+    background-color: hsl(223, 31%, 20%);
+    margin-right: 10px;
+    margin-left: 20px;
+    width: 63px;
+    border-radius: 10px;
+}
+.theme-button {
+    background-color: hsl(223, 31%, 20%);
+    cursor: pointer;
+    border: none;
+    width: 22px;
+    border-radius: 10px;
+}
+
+/* Parte do meio da calculadora */
+
+.middle-calculator {
+    border-radius: 7px;
+    margin-top: 10px;
+    min-height: 95px;
+    background-color: hsl(224, 36%, 15%);
+}
+.middle-calculator h1 {
+    color: white;
+    font-size: 4.0rem;
+    margin-top: 33px;
+    width: 90%;
+    margin-left: 20px;
+    text-align: end;
+    letter-spacing: 3px;
+}
+
+/* Parte de baixo da calculadora */
+
+.bottom-calculator {
+    margin-top: 20px;
+    height: 95%;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 8px;
+    padding: 25px;
+    padding-right: 0;
+}
+.numbers, .del {
+    width: 85px;
+    height: 47px;
+    margin-right: 18px;
+    margin-bottom: 19px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+.reset, .igual {
+    height: 47px;
+    width: 45%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.reset {
+    margin-right: 18px;
+    background-color: hsl(225, 21%, 49%);
+    border-bottom: 3px solid hsl(224, 28%, 35%);
+}
+.igual {
+    background-color: hsl(6, 63%, 50%);
+    border-bottom: 3px solid hsl(6, 70%, 34%);
+}
+.del {
+    padding: 4px;
+    background-color: hsl(225, 21%, 49%);
+    border-bottom: 3px solid hsl(224, 28%, 35%);
+}
+.numbers {
+    background-color: hsl(30, 25%, 89%);
+    border-bottom: solid 3px hsl(28, 16%, 65%);
+    text-align: center;
+}
+.bottom-calculator h2 {
+    /* font-size: 3.0rem; */
+    color: hsl(223, 31%, 20%);
+    font-weight: bold;
+}
+.bottom-calculator h3 {
+    color: white;
+    font-weight: bold;
+}
+.numbers:hover {
+    background-color: hsl(0, 0%, 100%);
+}
+.del:hover, .reset:hover {
+    background-color: hsl(224, 40%, 68%);
+}
+.igual:hover {
+    background-color: hsl(6, 83%, 66%);
+}
+
+
+#span1, #span2, #span3 {
+    width: 11px;
+    height: 11px;
+    border-radius: 10px;
+    border: none;
+}
+
+#span1 {
+    background-color: hsl(6, 63%, 50%);
+    position: absolute;
+    top: 56px;
+    left: 845px;
+}
+#span2 {
+    background-color: hsl(29, 100%, 50%);
+    position: absolute;
+    top: 56px;
+    left: 864px;
+    display: none;
+}
+#span3 {
+    background-color: hsl(176, 100%, 44%);
+    position: absolute;
+    top: 56px;
+    left: 885px;
+    display: none;
+}
+
+.attribution {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+.attribution a { color: hsl(228, 100%, 79%); }

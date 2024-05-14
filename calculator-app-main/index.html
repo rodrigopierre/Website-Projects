@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <script defer src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <span id="span1"></span>
+    <span id="span2"></span>
+    <span id="span3"></span>
+    <div class="top-calculator">
+      <div class="top-left" id="calc">calc</div>
+      <div class="top-middle" id="theme-">THEME</div>
+      <div class="top-right">
+        <div class="theme-top" id="nums">
+          1 2 3
+        </div>
+        <div class="theme-bottom" id="theme-bottom">
+          <button class="theme-button" onclick="theme1()" id="botao1"></button>
+          <button class="theme-button" onclick="theme2()" id="botao2"></button>
+          <button class="theme-button" onclick="theme3()" id="botao3"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="middle-calculator" id="middle-calculator">
+      <h1 class="result" id="screen"></h1>
+    </div>
+
+    <div class="bottom-calculator" id="bottom-calculator">
+      <div class="row1">
+        <button class="numbers" id="seven" onclick="addSeven()"><h2>7</h2></button>
+        <button class="numbers" id="eight" onclick="addEight()"><h2>8</h2></button>
+        <button class="numbers" id="nine" onclick="addNine()"><h2>9</h2></button>
+        <button class="del" id="del" onclick="Delete()"><h3>DEL</h3></button>
+      </div>
+      <div class="row2">
+        <button class="numbers" id="four" onclick="addFour()"><h2>4</h2></button>
+        <button class="numbers" id="five" onclick="addFive()"><h2>5</h2></button>
+        <button class="numbers" id="six" onclick="addSix()"><h2>6</h2></button>
+        <button class="numbers" id="adicao" onclick="adicao()"><h2>+</h2></button>
+      </div>
+      <div class="row3">
+        <button class="numbers" id="one" onclick="addOne()"> <h2>1</h2></button>
+        <button class="numbers" id="two" onclick="addTwo()"> <h2>2</h2></button>
+        <button class="numbers" id="three" onclick="addThree()"> <h2>3</h2></button>
+        <button class="numbers" id="subtracao" onclick="subtracao()"> <h2>-</h2></button>
+      </div>
+      <div class="row4">
+        <button class="numbers" id="point" onclick="addPoint()"> <h2>.</h2></button>
+        <button class="numbers" id="zero" onclick="addZero()"> <h2>0</h2></button>
+        <button class="numbers" id="divisao" onclick="divisao()"> <h2>/</h2></button>
+        <button class="numbers" id="multiplicacao" onclick="multiplicacao()"> <h2>x</h2></button>
+      </div>
+      <div class="row5">
+        <button class="reset" id="reset" onclick="reset()"><h3>RESET</h3></button>
+        <button class="igual" id="igual" onclick="calculate()"><h3>=</h3></button>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution" id="atb">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/rodrigopierre">Rodrigo Pierre</a>.
+  </div>
+</body>
+</html>
