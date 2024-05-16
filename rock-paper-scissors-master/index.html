@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <script defer src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="rules" id="rules">
+    <div class="rules-top">
+      <h1>Rules</h1>
+      <button class="exit-btn" onclick="exitRules()">X</button>
+    </div>
+    <div class="rules-bottom">
+      <img src="images\image-rules.svg" alt="rules image">
+    </div>
+  </div>
+
+  <main id="tela">
+    <div class="top">
+      <div class="top-left">
+        <h1>ROCK</h1>
+        <h1>PAPER</h1>
+        <h1>SCISSORS</h1>
+      </div>
+      <div class="top-right">
+        <h2>SCORE</h2>
+        <h1 id="score-number">0</h1>
+      </div>
+    </div>
+
+    <div class="middle" id="middle">
+      <div class="middle-top">
+        <div class="papel">
+          <button class="papel-btn" onclick="escolhaPapel()"></button>
+        </div>
+        <div class="tesoura">
+          <button class="tesoura-btn" onclick="escolhaTesoura()"></button>
+        </div>
+      </div>
+      <div class="middle-bottom">
+        <div class="pedra">
+          <button class="pedra-btn" onclick="escolhaPedra()"></button>
+        </div>
+      </div>
+      <button class="rules-btn" onclick="rules()">RULES</button>
+    </div>
+
+    <div class="middle2" id="middle2">
+      <div class="you">
+        <h1>YOU PICKED</h1>
+        <div class="back-you" id="back-you">
+          <div class="front-you" id="front-you"></div>
+        </div>
+      </div>
+      <div class="result" id="result">
+        <h1 id="result-title">YOU LOSE</h1>
+        <button class="play-again" id="play-again" onclick="playAgain()">PLAY AGAIN</button>
+      </div>
+      <div class="house">
+        <h1>THE HOUSE PICKED</h1>
+        <div class="back-house" id="back-house">
+          <div class="front-house" id="front-house"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/rodrigopierre">Rodrigo Pierre</a>.
+  </div>
+</body>
+</html>
